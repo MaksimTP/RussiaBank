@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+}
+
+body {
+    background: #08d097
+}
+
+
+#aside {  
+    position: absolute;
+    z-index: 100;
+    transition: 0.3s;
+    background: #000000;
+    width: 3.5vw;
+    padding: 20px;
+    float: left;
+
+}
+
+#aside:hover { 
+    position: absolute;
+    z-index: 100;
+    transition: 0.3s; 
+    background: #008794;
+    width: 9.5vw;
+    border-right: 5px solid #004a53;
+    padding: 20px;
+    float: left;
+
+}
+
+#message {
+    padding: 20px;
+    position: relative;
+    top: 30vh;
+    right: -30%;
+    width: 40%;
+    height: 2vh;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.sticky {
+    position: fixed !important;
+    top: 0px !important;
+    right: 27.1% !important;
+  }
+
+
+
+
+/* .chatContainer {
+    background-image: url(https://img.freepik.com/free-photo/pool-water-colour-handmade-technique-aquarelle_23-2148300780.jpg?w=996&t=st=1709834048~exp=1709834648~hmac=f418f257307b99de84b0c7a5e6d57b6a3e9568c0db9f3310d74a522305efb060);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90vw;
+    height: 85vh;
+    border: 1px solid #ccc;
+    padding: 20px;
+    float: right;
+}
+
+.messageInput{
+    
+    position: relative;
+    z-index: 99;
+    transition: 0.1s; 
+    background: rgb(223, 6, 6);
+    width: 93vw;
+    height: fit-content;
+    border: 1px solid #ccc;
+    float: right;
+} */
