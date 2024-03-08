@@ -28,7 +28,6 @@ async def process_message(message: Message):
     answer = clarifai_api.rag_agent.chat(messages=[{"role":"human", "content": message.message}])
     return {"response": f"{answer}"}
 
-
 # from engine import engine
 # import utils
 
