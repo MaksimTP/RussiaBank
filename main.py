@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
+import clarifai_api
 app = FastAPI()
 
 app.add_middleware(
@@ -25,8 +25,7 @@ class Message(BaseModel):
 
 @app.post("/chat")
 async def process_message(message: Message):
-    answer = message.message + ", zdarova "
-
+    answer = clarifai_api.rag_agent.chat(messages=[{"role":"human", "content": message.message}])
     return {"response": f"{answer}"}
 
 
