@@ -26,7 +26,8 @@ class Message(BaseModel):
 @app.post("/chat")
 async def process_message(message: Message):
     answer = clarifai_api.rag_agent.chat(messages=[{"role":"human", "content": message.message}])
-    return {"response": f"{answer}"}
+    print("HUY")
+    return {"response": f"{answer[0]['content']}"}
 
 # from engine import engine
 # import utils
