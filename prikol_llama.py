@@ -4,8 +4,8 @@ import time
 
 start_point = time.time()
 
-# llm = AutoModelForCausalLM.from_pretrained("/home/charslib/Documents/hakathon/RussiaBank/llama/llama.cpp/models/my_model", model_file="llama-2-7b.Q4_K_M.gguf", model_type="llama")
-llm = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7B-GGUF", model_file="llama-2-7b.Q4_K_M.gguf", model_type="llama", gpu_layers = 50)
+llm = AutoModelForCausalLM.from_pretrained("/home/charslib/Documents/hakathon/RussiaBank/llama/llama.cpp/models/my_model", model_file="llama-2-7b.Q4_K_M.gguf", model_type="llama")
+# llm = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7B-GGUF", model_file="llama-2-7b.Q4_K_M.gguf", model_type="llama", gpu_layers = 50)
 
 first_point = time.time()
 
