@@ -28,15 +28,17 @@ async def process_message(message: Message):
     answer = message.message + ", zdarova "
 
     return {"response": f"{answer}"}
-from engine import engine
-import utils
 
 
-for i in utils.get_text_files():
-    with open("docs/" + i, "r") as file:
-        lines = " ".join(file.readlines())
-        engine.index(i, i + lines)
+# from engine import engine
+# import utils
 
-    print(engine.search("Как заполнять платежное поручение?"), "\n")
+
+# for i in utils.get_text_files():
+#     with open("docs/" + i, "r") as file:
+#         lines = " ".join(file.readlines())
+#         engine.index(i, i + lines)
+
+#     print(engine.search("Как заполнять платежное поручение?"), "\n")
 
 
