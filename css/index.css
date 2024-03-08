@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    height: 200vh;
+    height: 300vh;
 }
 
 body {
@@ -35,10 +35,10 @@ body {
 #message {
     padding: 20px;
     position: relative;
-    top: 30vh;
+    top: 135px;
     right: -30%;
     width: 40%;
-    height: 2vh;
+    height: 20px;
     border-radius: 20px;
     font-size: 25px;
 }
@@ -48,6 +48,17 @@ body {
     top: 0px !important;
     right: 27.1% !important;
   }
+
+#sendMessage {
+    position: relative;
+    height: 64px;
+    width: 6%;
+    top: 155px;
+    right: -30%;
+    border-radius: 20px;
+    font-size: 20px;
+
+}
 
 
 
