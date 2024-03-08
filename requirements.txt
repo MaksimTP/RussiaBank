@@ -4,3 +4,4 @@ clarifai
 llama-index-core==0.10.1
 PyPDF2
 openpyxl>=2.5.8
+llama-index

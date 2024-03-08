@@ -1,10 +1,10 @@
 workflow:
-  id: rag-wf-1709882383
+  id: rag-wf-1709884637
   nodes:
   - id: rag-prompter
     model:
-      model_id: rag-prompter-1709882383
-      model_version_id: 48d3363b04f249e29375e9954eb20d31
+      model_id: rag-prompter-1709884637
+      model_version_id: d59cbfccc0c8481aa283e65fbab91ba9
   - id: llm
     model:
       app_id: completion
