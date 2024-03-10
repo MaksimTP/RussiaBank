@@ -5,6 +5,7 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 
 class DocumentHolder:
+    
     try:
         os.mkdir("docs")
     except:
@@ -73,7 +74,7 @@ class VectorCalculator:
     
     def get_scores(self):
         self.scores = [self.get_score_by_chunk(chunk_num) for chunk_num in self.encoded_document_by_chunks]
-
+        return self.scores
 
 class RAG:
     pass
