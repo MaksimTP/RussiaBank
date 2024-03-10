@@ -73,3 +73,7 @@ class VectorCalculator:
     
     def get_scores(self):
         self.scores = [self.get_score_by_chunk(chunk_num) for chunk_num in self.encoded_document_by_chunks]
+
+
+class RAG:
+    pass
