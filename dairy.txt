@@ -1,6 +1,0 @@
-https://habr.com/ru/articles/797657/
-https://youtu.be/PHmpS7sxBes?si=yeSQg-I_ZR1VLut9
-https://youtu.be/j1XRLh7yzzY?si=p0llhWfyV4wSlRqf
-https://huggingface.co/ai-forever/FRED-T5-1.7B
-https://huggingface.co/intfloat/multilingual-e5-large
-https://habr.com/ru/amp/publications/779748/

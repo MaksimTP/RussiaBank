@@ -1,0 +1,14 @@
+torch
+Cython
+pdfreader
+pdfreader
+sentence_transformers
+ipywidgets
+download
+spacy
+nltk
+contractions
+inflect
+docx2txt
+pdfminer
+fake_useragent
