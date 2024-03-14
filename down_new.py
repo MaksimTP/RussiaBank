@@ -5,9 +5,9 @@ import re
 from requests.exceptions import MissingSchema
 
 
-with open('download_info.txt', 'w') as info_file:
+with open("download_info.txt", "w") as info_file:
     # Открываем файл с ссылками
-    with open('docs_urls.txt') as file:
+    with open("docs_urls.txt") as file:
         links = file.readlines()
 
     # Последовательно обходим каждую ссылку и скачиваем содержимое
@@ -19,9 +19,12 @@ with open('download_info.txt', 'w') as info_file:
             response = requests.head(link)
 
             # Если сервер поддерживает заголовок Content-Disposition, получаем имя файла из него
-            if 'Content-Disposition' in response.headers:
-                header = response.headers['Content-Disposition']
-                filename = re.findall(r'filename\*?=\"?([^\";]*)\"?(;filename\*?=UTF-8\'\'([^"]*))?', header)
+            if "Content-Disposition" in response.headers:
+                header = response.headers["Content-Disposition"]
+                filename = re.findall(
+                    r'filename\*?=\"?([^\";]*)\"?(;filename\*?=UTF-8\'\'([^"]*))?',
+                    header,
+                )
                 if filename:
                     filename = filename[0][0].strip()
                 else:
@@ -35,7 +38,7 @@ with open('download_info.txt', 'w') as info_file:
             # Отправляем GET запрос для скачивания файла
             response = requests.get(link)
             if response.status_code == 200:  # Проверяем успешность запроса
-                with open(filename, 'wb') as file:
+                with open(filename, "wb") as file:
                     file.write(response.content)
                 print(f"Файл {filename} скачан успешно")
                 info_file.write(f"Файл: {filename}, Ссылка: {link}\n")

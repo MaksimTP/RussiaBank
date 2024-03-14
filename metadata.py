@@ -78,7 +78,6 @@
 #             id += 1
 
 
-
 # from pdfminer.pdfparser import PDFParser
 # from pdfminer.pdfdocument import PDFDocument
 # from pdfminer.pdfinterp import PDFResourceManager
@@ -109,7 +108,7 @@ with open("download_info_new.txt", "r") as fp:
     lines = fp.readlines()
     for line in lines:
         if "file_path" in line:
-            match = re.search(r'Ссылка: (.*)', line)
+            match = re.search(r"Ссылка: (.*)", line)
             if match:
                 link_text = match.group(1)
                 print(link_text)

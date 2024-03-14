@@ -1,47 +1,58 @@
-
 import clickhouse_connect
 import subprocess
 import os
 from pdfreader import SimplePDFViewer
 
+
 def set_to_master(client, id, id_doc, chunk):
-    client.insert('ML_unitaz', [id, id_doc, chunk], column_names=['id', 'id_document', 'chunk'])
+    client.insert(
+        "ML_unitaz", [id, id_doc, chunk], column_names=["id", "id_document", "chunk"]
+    )
+
 
 def set_to_slave(client, id, document_name, document_url):
-    client.insert('ML_skibidi', [id, document_name, document_url], column_names=['id', 'document_name', 'document_url'])
+    client.insert(
+        "ML_skibidi",
+        [id, document_name, document_url],
+        column_names=["id", "document_name", "document_url"],
+    )
 
-def set_to_db(client,id, id_doc, chunk,document_name, document_url):
+
+def set_to_db(client, id, id_doc, chunk, document_name, document_url):
     set_to_master(client, id, id_doc, chunk)
     set_to_slave(client, id, document_name, document_url)
 
 
 def get_chunk(client, table, id):
-    arr_chunk = client.query(f'SELECT chunk FROM {table} WHERE id = {id}')
+    arr_chunk = client.query(f"SELECT chunk FROM {table} WHERE id = {id}")
     return arr_chunk.result_rows[0][0]
 
 
 def get_row(client, id):
-    data1 = client.query(f'SELECT * EXCEPT (id) FROM ML_skibidi WHERE id = {id}')
-    data2 = client.query(f'SELECT * EXCEPT (id) FROM ML_unitaz WHERE id = {id}')
+    data1 = client.query(f"SELECT * EXCEPT (id) FROM ML_skibidi WHERE id = {id}")
+    data2 = client.query(f"SELECT * EXCEPT (id) FROM ML_unitaz WHERE id = {id}")
     if data1 != None and data2 != None:
         result = data1.result_rows[0] + (data2.result_rows[0])
         return result
     else:
         return None
 
-client = clickhouse_connect.get_client(host='localhost', port=8123, username='default', password='')
+
+client = clickhouse_connect.get_client(
+    host="localhost", port=8123, username="default", password=""
+)
 
 table = "document"
 table2 = "chunk"
 
 
 # set_to_master(client, 1,1,[1,2,3,4,5,6,7,8,9,10])
-row1 = [1000, 'String Value 1000', "5.233"]
-row2 = [2000, 'String Value 2000', "-"]
+row1 = [1000, "String Value 1000", "5.233"]
+row2 = [2000, "String Value 2000", "-"]
 data = [row1]
 # client.insert('new_table', data, column_names=['key', 'value', 'metric'])
 # print(len(data[0]))
-client.insert('ML_skibidi', data, column_names=['id', 'document_name', 'document_url'])
+client.insert("ML_skibidi", data, column_names=["id", "document_name", "document_url"])
 #
 # client.command(f'CREATE TABLE {table} (id UInt32, document_name String, document_url String) ENGINE MergeTree PRIMARY KEY id')
 #
