@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f2ad9f9-1537-4570-8377-c47ed1687221" name="Changes" comment="" />
+    <list default="true" id="3f2ad9f9-1537-4570-8377-c47ed1687221" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/FRED_T5_tests-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/FRED_T5_tests-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRED_T5_tests.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/FRED_T5_tests.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/0.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/FRED-T5-large/pytorch_model.bin" beforeDir="false" afterPath="$PROJECT_DIR$/models/FRED-T5-large/pytorch_model.bin" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -25,15 +39,24 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2dOVjFTordPAXAqbNZgU4EFuHjl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.down.executor": "Run",
+    "Python.down_new.executor": "Run",
+    "Python.met_doc.executor": "Run",
+    "Python.metadata.executor": "Run",
+    "Python.parser.executor": "Run",
+    "Python.url_edit.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "test__build",
+    "git-widget-placeholder": "ML",
     "last_opened_file_path": "/home/zoidberg2000/code/hakaton/RussiaBank"
   }
 }]]></component>
